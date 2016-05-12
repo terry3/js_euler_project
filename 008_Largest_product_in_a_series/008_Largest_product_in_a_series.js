@@ -95,7 +95,7 @@ for(var i = 0; i <= HEIGHT_MAX; i++) {
     east = getEast(i, j);
     south = getSouth(i, j);
     southEast = getSouthEast(i, j);
-    southWest = getSouthEast(i, j);
+    southWest = getSouthWest(i, j);
     max = Math.max(east, south, southEast, southWest, max);
   }
 }
