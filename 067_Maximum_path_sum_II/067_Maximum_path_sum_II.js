@@ -19,7 +19,7 @@ NOTE: This is a much more difficult version of Problem 18. It is not
  efficient algorithm to solve it. ;o)
  */
 
-var fs = require("fs");
+var fs = require('fs');
 var data = fs.readFileSync('p067_triangle.txt');
 var tmpOrigin = data.toString().split('\n');
 var origin = [];
