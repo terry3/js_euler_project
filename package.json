@@ -1,6 +1,7 @@
 {
   "name": "js_euler_project",
   "dependencies": {
-    "big.js" : "3.1.3"
+    "big.js" : "3.1.3",
+    "permute" : "*"
   }
 }
