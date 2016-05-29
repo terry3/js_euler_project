@@ -74,4 +74,4 @@ for (var i = 0; i < origin.length; i++) {
 }
 
 console.log(tmpArr);
-console.log(Math.max.apply(Math, tmpArr));
+console.log(Math.max.apply(null, tmpArr));

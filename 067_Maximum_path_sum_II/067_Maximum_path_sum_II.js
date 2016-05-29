@@ -56,4 +56,4 @@ for (var i = 0; i < origin.length; i++) {
   tmpArr = array;
 }
 
-console.log(Math.max.apply(Math, tmpArr));
+console.log(Math.max.apply(null, tmpArr));
