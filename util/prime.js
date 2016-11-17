@@ -26,6 +26,9 @@ function calculateNthPrime(nth) {
 }
 
 function isPrime(n) {
+  if (1 === n) {
+    return false;
+  }
   var sqrtN = parseInt(Math.sqrt(n));
   var currentPrimeIndex = primes.length;
   if (primes[currentPrimeIndex - 1] < sqrtN) {
