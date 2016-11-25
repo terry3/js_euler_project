@@ -23,6 +23,7 @@ function calculateNthPrime(nth) {
     }
     now += 2;
   }
+  return primes[primes.length - 1];
 }
 
 function isPrime(n) {
