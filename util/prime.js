@@ -5,7 +5,7 @@ function calculateNthPrime(nth) {
       now = 3,
       primeFlag = true;
   if (primes.length >= nth) {
-    return;
+    return primes[nth - 1];
   }
   count = nth - primes.length;
   while (count < nth) {
@@ -33,7 +33,13 @@ function isPrime(n) {
   var sqrtN = parseInt(Math.sqrt(n));
   var currentPrimeIndex = primes.length;
   if (primes[currentPrimeIndex - 1] < sqrtN) {
-    while(calculateNthPrime(++currentPrimeIndex) < sqrtN);
+    /* while(calculateNthPrime(++currentPrimeIndex) < sqrtN);*/
+    while(true ) {
+      var tmp = calculateNthPrime(++currentPrimeIndex);
+      if (!(tmp < sqrtN)) {
+        break;
+      }
+    }
   }
   for(var i = 0; primes[i] <= sqrtN; i++) {
     if (0 === n % primes[i]) {
