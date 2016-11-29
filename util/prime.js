@@ -23,7 +23,7 @@ function calculateNthPrime(nth) {
     }
     now += 2;
   }
-  return primes[primes.length - 1];
+  return primes[nth - 1];
 }
 
 function isPrime(n) {
@@ -51,3 +51,4 @@ function isPrime(n) {
 
 exports.isPrime = isPrime;
 exports.primes = primes;
+exports.calculateNthPrime = calculateNthPrime;
