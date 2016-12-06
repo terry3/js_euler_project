@@ -10,23 +10,7 @@
  * Find the sum of all 0 to 9 pandigital numbers with this property.*/
 
 const _ = require('lodash');
-function permutator(inputArr) {
-  var results = [];
-  function permute(arr, memo) {
-    var cur, memo = memo || [];
-
-    for (var i = 0; i < arr.length; i++) {
-      cur = arr.splice(i, 1);
-      if (arr.length === 0) {
-        results.push(memo.concat(cur));
-      }
-      permute(arr.slice(), memo.concat(cur));
-      arr.splice(i, 0, cur[0]);
-    }
-    return results;
-  }
-  return permute(inputArr);
-}
+const util = require('../util/util');
 
 const desArr = [2, 3, 5, 7, 11, 13, 17];
 const isSpecialNum = function(s) {
@@ -40,7 +24,7 @@ const isSpecialNum = function(s) {
 }
 
 
-console.log(permutator(_.range(0, 10)).reduce((p, c) => {
+console.log(util.permutator(_.range(0, 10)).reduce((p, c) => {
   var a = c.reduce((cp, cc) => 10 * cp + cc).toString()
   if (a.length !== 10) {
     return p;
